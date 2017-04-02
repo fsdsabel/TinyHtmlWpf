@@ -23,5 +23,6 @@ Internally it uses LiteHtml from https://github.com/litehtml/litehtml</descripti
         <file src="TinyWpfHtml.targets" target="build\net46\TinyWpfHtml.targets" />
         <file src="css\master.css" target="content\master.css" />
         <file src="Bin\Release\TinyHtml.Wpf.dll" target="lib\net46\TinyHtml.Wpf.dll" />
+        <file src="Bin\Release\TinyHtml.Wpf.xml" target="lib\net46\TinyHtml.Wpf.xml" />
     </files>
 </package>

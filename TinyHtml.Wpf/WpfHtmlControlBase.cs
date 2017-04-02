@@ -3,7 +3,6 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Input;
 using System.Windows.Media;
 using LiteHtml;
 
@@ -60,13 +59,19 @@ namespace TinyHtml.Wpf
         }
 
         
-
+        /// <summary>
+        /// Sets the master style sheet that is used to define default HTML rendering.
+        /// A default css file comes with the package.
+        /// </summary>
+        /// <param name="css">CSS to use</param>
         public static void SetMasterStylesheet(string css)
         {
             HtmlControl.SetMasterStylesheet(css);
         }
 
-
+        /// <summary>
+        /// HTML content to use for rendering.
+        /// </summary>
         public string Html
         {
             get { return (string)GetValue(HtmlProperty); }
@@ -78,11 +83,21 @@ namespace TinyHtml.Wpf
             DependencyProperty.Register("Html", typeof(string), typeof(WpfHtmlControlBase), new PropertyMetadata(null));
 
 
+        /// <summary>
+        /// Override this to implement resource loading. Currently used for images.
+        /// </summary>
+        /// <param name="url">Url like it is defined in HTML.</param>
+        /// <returns>Stream that contains the resource. The control will dispose this, if it is no longer needed.</returns>
         protected virtual Stream OnLoadResource(string url)
         {
             return null;
         }
 
+        /// <summary>
+        /// Loads the given HTML and CSS content.
+        /// </summary>
+        /// <param name="html">HTML to display.</param>
+        /// <param name="usercss">CSS to use.</param>
         public void LoadHtml(string html, string usercss)
         {
             _htmlControl.LoadHtml(html, usercss);
@@ -90,8 +105,10 @@ namespace TinyHtml.Wpf
 
 
 
-
-        public double FontSizeProperty
+        /// <summary>
+        /// Font size to use as default font size when rendering HTML.
+        /// </summary>
+        public new double FontSizeProperty
         {
             get { return (double)GetValue(FontSizePropertyProperty); }
             set { SetValue(FontSizePropertyProperty, value); }

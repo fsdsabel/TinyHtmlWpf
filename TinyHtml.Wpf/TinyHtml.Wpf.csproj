@@ -37,6 +37,7 @@
     <OutputPath>$(SolutionDir)bin\$(Configuration)</OutputPath>
     <WarningLevel>4</WarningLevel>
     <RunOctoPack>true</RunOctoPack>
+    <DocumentationFile>..\bin\Release\TinyHtml.Wpf.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>

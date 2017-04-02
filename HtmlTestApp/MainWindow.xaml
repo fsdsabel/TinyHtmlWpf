@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HtmlTestApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="TinyHtml.Wpf Test App" Height="450" Width="525">
     <TabControl>
-        <TabItem Header="tab1">
-            <local:WpfHtmlControl x:Name="HtmlControl" Background="Bisque" Foreground="LightGreen" Html="{Binding Html1}"></local:WpfHtmlControl>
+        <TabItem Header="Simple">
+            <local:WpfHtmlControl x:Name="HtmlControl" Background="Blue" Foreground="Red" FontSize="16" Html="&lt;b&gt;Hello world!&lt;/b&gt;"></local:WpfHtmlControl>
         </TabItem>
 
-        <TabItem Header="tab1">
-            <local:WpfHtmlControl x:Name="HtmlControl2" Background="Bisque" FontFamily="Comic Sans MS" Foreground="Black" Html="{Binding Html2}"></local:WpfHtmlControl>
+        <TabItem Header="Image">
+            <local:WpfHtmlControl Html="{Binding Html1}"></local:WpfHtmlControl>
+        </TabItem>
+        <TabItem Header="Table">
+            <local:WpfHtmlControl Html="{Binding Html2}"></local:WpfHtmlControl>
         </TabItem>
     </TabControl>
 </Window>
