@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\gumbo">
+      <UniqueIdentifier>{2ace1e9c-9b5f-42dc-8884-c15171319581}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gumbo">
+      <UniqueIdentifier>{ea5de415-e261-4c27-819a-a25f80f69673}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(LiteHtml)background.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)css_length.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)css_selector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)element.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_anchor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_before_after.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_break.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_cdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_comment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_div.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_link.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_para.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_script.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_space.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_style.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_td.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_title.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)el_tr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)html.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)html_tag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)iterators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)media_query.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)style.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)stylesheet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)utf8_strings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)web_color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\parser.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\string_buffer.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\string_piece.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\attribute.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\char_ref.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\error.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\tag.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\utf8.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\vector.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\util.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+    <ClCompile Include="$(LiteHtml)gumbo\tokenizer.c">
+      <Filter>Source Files\gumbo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(LiteHtml)attributes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)background.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)borders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)css_length.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)css_margins.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)css_offsets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)css_position.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)css_selector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)element.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_anchor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_before_after.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_body.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_break.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_cdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_comment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_div.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_link.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_para.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_script.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_space.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_style.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_td.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_title.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)el_tr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\insertion_mode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\strings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)html.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)html_tag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)iterators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)media_query.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)os_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)style.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)stylesheet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)utf8_strings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)web_color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\attribute.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\char_ref.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\error.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\parser.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\gumbo.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\string_buffer.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\string_piece.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\tokenizer.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\tokenizer_states.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\util.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\vector.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\tag_enum.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\tag_gperf.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\tag_sizes.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\tag_strings.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\token_type.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(LiteHtml)gumbo\utf8.h">
+      <Filter>Header Files\gumbo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

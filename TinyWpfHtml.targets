@@ -1,0 +1,96 @@
+<!--
+ *
+ * TinyWpfHtml.targets -
+ *
+ * WARNING: This MSBuild file requires MSBuild 4.0 features.
+ *
+ * Written by Joe Mistachkin and David Archer.
+ * Released to the public domain, use at your own risk!
+ *
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--
+  ******************************************************************************
+  **                    TinyWpfHtml Interop Library Build Items                    **
+  ******************************************************************************
+  -->
+
+  <ItemGroup>
+    <TinyWpfHtmlInteropFiles Condition="'$(MSBuildThisFileDirectory)' != '' And
+                                   HasTrailingSlash('$(MSBuildThisFileDirectory)')"
+                        Include="$(MSBuildThisFileDirectory)**\TinyWpfHtml.dll;$(MSBuildThisFileDirectory)**\msvcp140.dll;$(MSBuildThisFileDirectory)**\vcruntime140.dll" />
+  </ItemGroup>
+
+  <!--
+  ******************************************************************************
+  **                   TinyWpfHtml Interop Library Build Targets                   **
+  ******************************************************************************
+  -->
+
+  <Target Name="CopyTinyWpfHtmlInteropFiles"
+          Condition="'$(CopyTinyWpfHtmlInteropFiles)' != 'false' And
+                     '$(OutDir)' != '' And
+                     HasTrailingSlash('$(OutDir)') And
+                     Exists('$(OutDir)')"
+          Inputs="@(TinyWpfHtmlInteropFiles)"
+          Outputs="@(TinyWpfHtmlInteropFiles -> '$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')">
+    <!--
+        NOTE: Copy "TinyWpfHtml.dll" and all related files, for every
+              architecture that we support, to the build output directory.
+    -->
+    <Copy SourceFiles="@(TinyWpfHtmlInteropFiles)"
+          DestinationFiles="@(TinyWpfHtmlInteropFiles -> '$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+
+  <!--
+  ******************************************************************************
+  -->
+
+  <Target Name="CleanTinyWpfHtmlInteropFiles"
+          Condition="'$(CleanTinyWpfHtmlInteropFiles)' != 'false' And
+                     '$(OutDir)' != '' And
+                     HasTrailingSlash('$(OutDir)') And
+                     Exists('$(OutDir)')">
+    <!--
+        NOTE: Delete "TinyWpfHtml.dll" and all related files, for every
+              architecture that we support, from the build output directory.
+    -->
+    <Delete Files="@(TinyWpfHtmlInteropFiles -> '$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+
+  <!--
+  ******************************************************************************
+  -->
+
+  <Target Name="CollectTinyWpfHtmlInteropFiles"
+          Condition="'$(CollectTinyWpfHtmlInteropFiles)' != 'false'">
+    <ItemGroup>
+      <FilesForPackagingFromProject Include="@(TinyWpfHtmlInteropFiles)">
+        <DestinationRelativePath>bin\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+
+  <!--
+  ******************************************************************************
+  **                 TinyWpfHtml Interop Library Build Properties                  **
+  ******************************************************************************
+  -->
+
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+      $(PostBuildEventDependsOn);
+      CopyTinyWpfHtmlInteropFiles;
+    </PostBuildEventDependsOn>
+    <BuildDependsOn>
+      $(BuildDependsOn);
+      CopyTinyWpfHtmlInteropFiles;
+    </BuildDependsOn>
+    <CleanDependsOn>
+      $(CleanDependsOn);
+      CleanTinyWpfHtmlInteropFiles;
+    </CleanDependsOn>
+  </PropertyGroup>
+
+
+</Project>
