@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>TinyWpfHtml</id>
+        <id>TinyHtml.Wpf</id>
         <version>1.0.0.8</version>
-        <title>TinyWpfHtml</title>
+        <title>TinyHtml.Wpf</title>
         <authors>Daniel Sabel</authors>
         <projectUrl>https://github.com/fsdsabel/TinyHtmlWpf</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,6 +12,8 @@ It supports most CSS2/CSS3 features.
 
 Internally it uses LiteHtml from https://github.com/litehtml/litehtml</description>
         <summary>WPF Control to display HTML.</summary>
+        <copyright>Copyright (c) 2017, Daniel Sabel</copyright>
+        <tags>wpf, html</tags>
     </metadata>
     <files>
         <file src="VcRedist\x64\msvcp140.dll" target="build\net46\x64\msvcp140.dll" />
