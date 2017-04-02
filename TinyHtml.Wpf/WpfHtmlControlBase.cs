@@ -15,12 +15,7 @@ namespace TinyHtml.Wpf
     public class WpfHtmlControlBase : Control
     {
         private HtmlControl _htmlControl;
-
-        static WpfHtmlControlBase()
-        {
-            ModuleInitializer.Initialize();
-        }
-
+        
         public WpfHtmlControlBase()
         {
             _htmlControl = new HtmlControl();

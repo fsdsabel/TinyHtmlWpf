@@ -5,7 +5,7 @@
         <version>1.0.0.8</version>
         <title>TinyWpfHtml</title>
         <authors>Daniel Sabel</authors>
-        <projectUrl>https://github.com/fsdsabel/TinyWpfHtml</projectUrl>
+        <projectUrl>https://github.com/fsdsabel/TinyHtmlWpf</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This library renders HTML using WPF GraphicsContext. This results in seemlessly blending with the rest of ur UI.
 It supports most CSS2/CSS3 features.
