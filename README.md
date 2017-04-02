@@ -36,7 +36,7 @@ x86 and x64 (or AnyCPU) applications.
 4. Compile configuration Release - x64
 5. Binaries should be in **Bin** directory and **HtmlTestApp** should run
 
-## Using
+## Usage
 Basically there is only one class you need. It is `WpfHtmlControlBase` which is subclassed from a standard
 WPF `Control`. 
 
