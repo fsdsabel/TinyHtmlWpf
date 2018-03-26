@@ -8,14 +8,14 @@
         Title="TinyHtml.Wpf Test App" Height="450" Width="525">
     <TabControl>
         <TabItem Header="Simple">
-            <local:WpfHtmlControl x:Name="HtmlControl" Background="Blue" Foreground="Red" FontSize="16" Html="&lt;b&gt;Hello world!&lt;/b&gt;"></local:WpfHtmlControl>
+            <local:EmbeddedWpfHtmlControl x:Name="HtmlControl" Background="Blue" Foreground="Red" FontSize="16" Html="&lt;b&gt;Hello world!&lt;/b&gt;"></local:EmbeddedWpfHtmlControl>
         </TabItem>
 
         <TabItem Header="Image">
-            <local:WpfHtmlControl Html="{Binding Html1}"></local:WpfHtmlControl>
+            <local:EmbeddedWpfHtmlControl Html="{Binding Html1}"></local:EmbeddedWpfHtmlControl>
         </TabItem>
         <TabItem Header="Table">
-            <local:WpfHtmlControl Html="{Binding Html2}"></local:WpfHtmlControl>
+            <local:EmbeddedWpfHtmlControl Html="{Binding Html2}"></local:EmbeddedWpfHtmlControl>
         </TabItem>
     </TabControl>
 </Window>

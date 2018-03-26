@@ -1,4 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Weavers>
   <ModuleInit />
+  <Costura IncludeDebugSymbols='false' >
+    <Unmanaged32Assemblies>
+      TinyWpfHtml32
+    </Unmanaged32Assemblies>
+    <Unmanaged64Assemblies>
+      TinyWpfHtml64
+    </Unmanaged64Assemblies>
+  </Costura>
 </Weavers>

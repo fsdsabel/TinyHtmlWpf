@@ -37,19 +37,18 @@ x86 and x64 (or AnyCPU) applications.
 5. Binaries should be in **Bin** directory and **HtmlTestApp** should run
 
 ## Usage
-Basically there is only one class you need. It is `WpfHtmlControlBase` which is subclassed from a standard
-WPF `Control`. 
+Basically there is only one class you need. It is `WpfHtmlControl` which is subclassed from a standard
+WPF `Control`. This control loads a default master style sheet. If you want a custom one, you can derive from
+`WpfHtmlControlBase` and load your own.
 
-Before you can use the control, you must give it a master style sheet. This style is used for all
-the default HTML elements like paragraphs or bold elements. You can either use the master.css contained in
-the Nuget package or modify it to your liking. For example you could do something like this:
+The master style sheet is used for all the default HTML elements like paragraphs or bold elements. For example you could do something like this:
 
 ```csharp
-public class WpfHtmlControl : WpfHtmlControlBase
+public class MyWpfHtmlControl : WpfHtmlControlBase
 {
-    static WpfHtmlControl()
+    static MyWpfHtmlControl()
     {
-        using (var s = typeof (WpfHtmlControl).Assembly.GetManifestResourceStream(typeof (WpfHtmlControl), "master.css"))
+        using (var s = typeof (MyWpfHtmlControl).Assembly.GetManifestResourceStream(typeof (MyWpfHtmlControl), "master.css"))
         {
             SetMasterStylesheet(new StreamReader(s).ReadToEnd());
         }
@@ -57,7 +56,9 @@ public class WpfHtmlControl : WpfHtmlControlBase
 }
 ```
 
-You would then use `WpfHtmlControl` in your application. The most basic usage would be:
+You would then use `MyWpfHtmlControl` in your application. 
+
+The most basic usage of a `WpfHtmlControl` would be:
 
 ```xml
 <local:WpfHtmlControl Background="Blue" Foreground="Red" FontSize="16" 
@@ -69,7 +70,7 @@ It is possible to bind to the `Html` property to update the displayed HTML dynam
 If you want to display images, you have to override `OnLoadResource`.
 
 ## License
-Copyright (c) 2017, Daniel Sabel  
+Copyright (c) 2018, Daniel Sabel  
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without  

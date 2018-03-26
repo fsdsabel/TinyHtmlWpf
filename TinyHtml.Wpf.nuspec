@@ -2,28 +2,25 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>TinyHtml.Wpf</id>
-        <version>1.0.0.8</version>
+        <version>1.1.0.0</version>
         <title>TinyHtml.Wpf</title>
         <authors>Daniel Sabel</authors>
         <projectUrl>https://github.com/fsdsabel/TinyHtmlWpf</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>This library renders HTML using WPF GraphicsContext. This results in seemlessly blending with the rest of ur UI.
-It supports most CSS2/CSS3 features.
+        <description>
+          This library renders HTML using WPF GraphicsContext. This results in seemlessly blending with the rest of ur UI.
+          It supports most CSS2/CSS3 features. Everything within one DLL.
 
-Internally it uses LiteHtml from https://github.com/litehtml/litehtml</description>
+          Internally it uses LiteHtml from https://github.com/litehtml/litehtml.
+
+          This library requires the Microsoft® C Runtime Library 14.0.
+        </description>
         <summary>WPF Control to display HTML.</summary>
-        <copyright>Copyright (c) 2017, Daniel Sabel</copyright>
+        <copyright>Copyright (c) 2018, Daniel Sabel</copyright>
         <tags>wpf, html</tags>
+        <releaseNotes>1.1.0.0 - streamlined package install, build and deployment</releaseNotes>
     </metadata>
     <files>
-        <file src="VcRedist\x64\msvcp140.dll" target="build\net46\x64\msvcp140.dll" />
-        <file src="Bin\x64\Release\TinyWpfHtml.dll" target="build\net46\x64\TinyWpfHtml.dll" />
-        <file src="VcRedist\x64\vcruntime140.dll" target="build\net46\x64\vcruntime140.dll" />
-        <file src="VcRedist\x86\msvcp140.dll" target="build\net46\x86\msvcp140.dll" />
-        <file src="Bin\Win32\Release\TinyWpfHtml.dll" target="build\net46\x86\TinyWpfHtml.dll" />
-        <file src="VcRedist\x86\vcruntime140.dll" target="build\net46\x86\vcruntime140.dll" />
-        <file src="TinyWpfHtml.targets" target="build\net46\TinyWpfHtml.targets" />
-        <file src="css\master.css" target="content\master.css" />
         <file src="Bin\Release\TinyHtml.Wpf.dll" target="lib\net46\TinyHtml.Wpf.dll" />
         <file src="Bin\Release\TinyHtml.Wpf.xml" target="lib\net46\TinyHtml.Wpf.xml" />
     </files>

@@ -25,7 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 		TinyHtml.Wpf.nuspec = TinyHtml.Wpf.nuspec
-		TinyWpfHtmlBuild.targets = TinyWpfHtmlBuild.targets
 	EndProjectSection
 EndProject
 Global
@@ -67,7 +66,6 @@ Global
 		{1AC0D3B0-CD98-4EB7-B266-0A1108C48CF5}.Release|x64.ActiveCfg = Release|x64
 		{1AC0D3B0-CD98-4EB7-B266-0A1108C48CF5}.Release|x64.Build.0 = Release|x64
 		{1AC0D3B0-CD98-4EB7-B266-0A1108C48CF5}.Release|x86.ActiveCfg = Release|x86
-		{1AC0D3B0-CD98-4EB7-B266-0A1108C48CF5}.Release|x86.Build.0 = Release|x86
 		{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -79,9 +77,11 @@ Global
 		{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}.Release|x64.ActiveCfg = Release|Any CPU
 		{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}.Release|x64.Build.0 = Release|Any CPU
 		{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}.Release|x86.ActiveCfg = Release|Any CPU
-		{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DFEBD7A-995D-4F8D-A6C4-75C6319CE5DF}
 	EndGlobalSection
 EndGlobal

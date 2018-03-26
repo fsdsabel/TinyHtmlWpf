@@ -4,17 +4,8 @@ using TinyHtml.Wpf;
 
 namespace HtmlTestApp
 {
-    public class WpfHtmlControl : WpfHtmlControlBase
+    public class EmbeddedWpfHtmlControl : WpfHtmlControl
     {
-        static WpfHtmlControl()
-        {
-            using (var s = typeof (WpfHtmlControl).Assembly.GetManifestResourceStream(typeof (WpfHtmlControl), "master.css"))
-            {
-                Debug.Assert(s != null, "s != null");
-                SetMasterStylesheet(new StreamReader(s).ReadToEnd());
-            }
-        }
-
         protected override Stream OnLoadResource(string url)
         {
             try

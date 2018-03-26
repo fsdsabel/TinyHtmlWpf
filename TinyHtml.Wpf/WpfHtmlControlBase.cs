@@ -9,12 +9,13 @@ using LiteHtml;
 namespace TinyHtml.Wpf
 {
     /// <summary>
-    /// This is just here as a proxy to C++/CLI
+    /// Base Control for rendering HTML.
     /// </summary>
     public class WpfHtmlControlBase : Control
     {
-        private HtmlControl _htmlControl;
-        
+        private readonly HtmlControl _htmlControl;
+
+        /// <inheritdoc />
         public WpfHtmlControlBase()
         {
             _htmlControl = new HtmlControl();
@@ -29,10 +30,11 @@ namespace TinyHtml.Wpf
         
         #region Overrides of FrameworkElement
 
-
+        /// <inheritdoc />
         protected override int VisualChildrenCount => 1;
-        
 
+
+        /// <inheritdoc />
         protected override Visual GetVisualChild(int index)
         {
             if (index == 0)
@@ -44,14 +46,15 @@ namespace TinyHtml.Wpf
         
         #endregion
 
-        
 
+        /// <inheritdoc />
         protected override Size MeasureOverride(Size constraint)
         {
             _htmlControl.Measure(constraint);
             return _htmlControl.DesiredSize;
         }
-        
+
+        /// <inheritdoc />
         protected override Size ArrangeOverride(Size arrangeBounds)
         {
             _htmlControl.Arrange(new Rect(arrangeBounds));
