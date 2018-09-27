@@ -136,6 +136,7 @@ namespace litehtml {
 
 	void wpf_container::on_anchor_click(const litehtml::tchar_t * url, const litehtml::element::ptr & el)
 	{
+		_binding->on_anchor_click(url);
 	}
 
 	void wpf_container::set_cursor(const litehtml::tchar_t * cursor)

@@ -15,6 +15,11 @@ capable nonetheless.
 A [Nuget package](https://www.nuget.org/packages/TinyHtml.Wpf) can be found on nuget.org. It supports
 x86 and x64 (or AnyCPU) applications.
 
+## Release Notes
+
+### 1.2.0.0
+- New virtual method `OnAnchorClicked` for `WpfHtmlControlBase` that allows interception of user clicks on links.
+
 ## Requirements
 - .NET 4.6
 - A WPF application

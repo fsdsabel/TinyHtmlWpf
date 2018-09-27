@@ -144,7 +144,7 @@ void HtmlControl::CreateContainerBinding() {
 	_drawBordersDel = gcnew DrawBordersDelegate(this, &HtmlControl::DrawBorders);
 	_drawListMarkerDel = gcnew DrawListMarkerDelegate(this, &HtmlControl::DrawListMarker);
 	_getDefaultsDel = gcnew GetDefaultsDelegate(this, &HtmlControl::GetDefaults);
-
+	_onAnchorClick = gcnew OnAnchorClickDelegate(this, &HtmlControl::OnAnchorClick);
 
 
 	_container_binding->text_width = (text_width)Marshal::GetFunctionPointerForDelegate(_textWidthtDel).ToPointer();
@@ -157,6 +157,7 @@ void HtmlControl::CreateContainerBinding() {
 	_container_binding->load_image = (load_image)Marshal::GetFunctionPointerForDelegate(_loadImageDel).ToPointer();
 	_container_binding->draw_list_marker = (draw_list_marker)Marshal::GetFunctionPointerForDelegate(_drawListMarkerDel).ToPointer();
 	_container_binding->get_defaults = (get_defaults)Marshal::GetFunctionPointerForDelegate(_getDefaultsDel).ToPointer();
+	_container_binding->on_anchor_click = (on_anchor_click)Marshal::GetFunctionPointerForDelegate(_onAnchorClick).ToPointer();
 }
 
 void HtmlControl::CleanupImages() {
@@ -850,4 +851,10 @@ void HtmlControl::GetDefaults(defaults & defaults)
 	defaults.font_size = GetFontSize(this);
 	pin_ptr<const wchar_t> font = PtrToStringChars(GetFontFamily(this)->ToString());
 	defaults.font_face_name = font;
+}
+
+void HtmlControl::OnAnchorClick(const litehtml::tchar_t * url)
+{
+	System::String^ surl = gcnew System::String(url);
+	AnchorClicked(surl);
 }

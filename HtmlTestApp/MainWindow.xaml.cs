@@ -15,7 +15,7 @@ namespace HtmlTestApp
         
         public string Html1
             =>
-                "<p>This is an example for an image:</p><image src=\"Semperoper.jpg\" style=\"width:100%\" />";
+                "<p>This is an example for an <a href=\"http://www.dresden.de\">image</a>:</p><image src=\"Semperoper.jpg\" style=\"width:100%\" />";
 
         public string Html2
             =>

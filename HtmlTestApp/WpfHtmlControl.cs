@@ -17,5 +17,10 @@ namespace HtmlTestApp
                 return null;
             }
         }
+
+        protected override void OnAnchorClicked(string url)
+        {
+            Process.Start(url);
+        }
     }
 }

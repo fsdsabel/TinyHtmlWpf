@@ -49,6 +49,7 @@ namespace litehtml {
 	typedef image* (*load_image)(const litehtml::tchar_t * src, const litehtml::tchar_t * baseurl) ;
 	typedef void(*draw_list_marker)(const litehtml::list_marker_ex & marker, font_desc* hFont);
 	typedef void(*get_defaults)(defaults & defaults);
+	typedef void(*on_anchor_click)(const litehtml::tchar_t * url);
 
 	struct wpf_container_binding {		
 		
@@ -62,6 +63,7 @@ namespace litehtml {
 		draw_borders draw_borders;
 		draw_list_marker draw_list_marker;
 		get_defaults get_defaults;
+		on_anchor_click on_anchor_click;
 	};
 
 }

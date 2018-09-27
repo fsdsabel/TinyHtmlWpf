@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>TinyHtml.Wpf</id>
-        <version>1.1.0.0</version>
+        <version>1.2.0.0</version>
         <title>TinyHtml.Wpf</title>
         <authors>Daniel Sabel</authors>
         <projectUrl>https://github.com/fsdsabel/TinyHtmlWpf</projectUrl>
@@ -18,7 +18,9 @@
         <summary>WPF Control to display HTML.</summary>
         <copyright>Copyright (c) 2018, Daniel Sabel</copyright>
         <tags>wpf, html</tags>
-        <releaseNotes>1.1.0.0 - streamlined package install, build and deployment</releaseNotes>
+        <releaseNotes>          
+            1.2.0.0 - implemented use of links
+            1.1.0.0 - streamlined package install, build and deployment</releaseNotes>
     </metadata>
     <files>
         <file src="Bin\Release\TinyHtml.Wpf.dll" target="lib\net46\TinyHtml.Wpf.dll" />

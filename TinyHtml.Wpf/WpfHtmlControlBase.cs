@@ -20,6 +20,7 @@ namespace TinyHtml.Wpf
         {
             _htmlControl = new HtmlControl();
             _htmlControl.LoadResource += OnLoadResource;
+            _htmlControl.AnchorClicked += OnAnchorClicked;
             _htmlControl.SetBinding(HtmlControl.HtmlProperty, new Binding(nameof(Html)) {Source = this});
             _htmlControl.SetBinding(HtmlControl.BackgroundProperty, new Binding(nameof(Background)) { Source = this });
             _htmlControl.SetBinding(HtmlControl.ForegroundProperty, new Binding(nameof(Foreground)) { Source = this });
@@ -95,6 +96,12 @@ namespace TinyHtml.Wpf
         {
             return null;
         }
+
+        /// <summary>
+        /// This method is called when the user clicks on a link.
+        /// </summary>
+        /// <param name="url">The url behind the anchor.</param>
+        protected virtual void OnAnchorClicked(string url) { }
 
         /// <summary>
         /// Loads the given HTML and CSS content.

@@ -42,10 +42,14 @@ namespace LiteHtml {
 	delegate void DrawListMarkerDelegate(const litehtml::list_marker_ex & marker, font_desc* hFont);
 	[UnmanagedFunctionPointerAttribute(CallingConvention::Cdecl)]
 	delegate void GetDefaultsDelegate(defaults & defaults);
+	[UnmanagedFunctionPointerAttribute(CallingConvention::Cdecl)]
+	delegate void OnAnchorClickDelegate(const litehtml::tchar_t * url);
 
 	public delegate Stream^ LoadImageDataDelegate(String^ url);
 
 	public delegate Stream^ LoadResourceDelegate(String^ url);
+
+	public delegate void AnchorClickedDelegate(String^ url);
 
 
 	ref class Lock {
@@ -175,6 +179,7 @@ namespace LiteHtml {
 		LoadImageDelegate^ _loadImageDel;
 		DrawListMarkerDelegate^ _drawListMarkerDel;
 		GetDefaultsDelegate^ _getDefaultsDel;
+		OnAnchorClickDelegate^ _onAnchorClick;
 		m_shared_ptr<document> _document;
 		static context* _context;
 		wpf_container* _wpf_container;
@@ -206,6 +211,7 @@ namespace LiteHtml {
 		image* LoadHtmlImage(const litehtml::tchar_t * src, const litehtml::tchar_t * baseurl);
 		void DrawListMarker(const litehtml::list_marker_ex & marker, font_desc* hFont);
 		void GetDefaults(defaults & defaults);
+		void OnAnchorClick(const litehtml::tchar_t * url);
 
 		static void OnHtmlChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs e);
 		static void OnFontChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs e);
@@ -229,6 +235,7 @@ namespace LiteHtml {
 		!HtmlControl();
 
 		event LoadResourceDelegate^ LoadResource;
+		event AnchorClickedDelegate^ AnchorClicked;
 
 		/// usercss will be applied after all other css, can be used by subclasses to inject some styles (override LoadHtml and call base LoadHtml with css)
 		virtual void LoadHtml(String^ html, String^ usercss);
