@@ -10,7 +10,7 @@ namespace HtmlTestApp
         {
             try
             {
-                return typeof(WpfHtmlControl).Assembly.GetManifestResourceStream(typeof(WpfHtmlControl), url);
+                return typeof(EmbeddedWpfHtmlControl).Assembly.GetManifestResourceStream(typeof(EmbeddedWpfHtmlControl), url);
             }
             catch
             {

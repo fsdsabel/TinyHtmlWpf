@@ -17,13 +17,18 @@ x86 and x64 (or AnyCPU) applications.
 
 ## Release Notes
 
+### 1.2.1.0
+- .NET Core 3.0 build
+- Upgrade to Visual Studio 2019
+
+
 ### 1.2.0.0
 - New virtual method `OnAnchorClicked` for `WpfHtmlControlBase` that allows interception of user clicks on links.
 
 ## Requirements
-- .NET 4.6
+- .NET 4.6 or .NET Core 3.0
 - A WPF application
-- Visual Studio 2017 for building
+- Visual Studio 2019 for building
 
 ## Supported features
 - WPF Text rendering
@@ -36,7 +41,7 @@ x86 and x64 (or AnyCPU) applications.
 ## Building
 1. Get sources from https://github.com/fsdsabel/TinyHtmlWpf:
 <br/><pre><code>git clone --recursive https://github.com/fsdsabel/TinyHtmlWpf.git</code></pre>
-2. Open the Solution TinyWpfHtml.sln in Visual Studio 2017
+2. Open the Solution TinyWpfHtml.sln in Visual Studio 2019
 3. Compile configuration Release - x86
 4. Compile configuration Release - x64
 5. Binaries should be in **Bin** directory and **HtmlTestApp** should run
@@ -75,7 +80,7 @@ It is possible to bind to the `Html` property to update the displayed HTML dynam
 If you want to display images, you have to override `OnLoadResource`.
 
 ## License
-Copyright (c) 2018, Daniel Sabel  
+Copyright (c) 2020, Daniel Sabel  
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without  

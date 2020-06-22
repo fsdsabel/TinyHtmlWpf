@@ -12,7 +12,9 @@ internal static class ModuleInitializer
     /// </summary>
     public static void Initialize()
     {
+#if NET46
         CosturaUtility.Initialize();
+#endif
     }
 }
 

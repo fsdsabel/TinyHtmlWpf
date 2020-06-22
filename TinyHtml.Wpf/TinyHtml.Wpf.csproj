@@ -1,14 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <ProjectGuid>{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}</ProjectGuid>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFrameworks>net46;netcoreapp3.0</TargetFrameworks>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <OutputPath>$(SolutionDir)bin\$(Configuration)</OutputPath>
+    <Version>1.2.1.0</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -24,19 +27,28 @@
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\TinyWpfHtml.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Daniel Sabel</Authors>
+    <Company />
+    <Description>This library renders HTML using WPF GraphicsContext. This results in seemlessly blending with the rest of ur UI.
+It supports most CSS2/CSS3 features. Everything within one DLL.
+
+Internally it uses LiteHtml from https://github.com/litehtml/litehtml.
+
+This library requires the Microsoft® C Runtime Library 14.0.</Description>
+    <Copyright>Copyright (c) 2020, Daniel Sabel</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/fsdsabel/TinyHtmlWpf</PackageProjectUrl>
+    <PackageReleaseNotes>1.2.1.0 - Support for .NET Core 3.0
+1.2.0.0 - implemented use of links
+1.1.0.0 - streamlined package install, build and deployment</PackageReleaseNotes>
+    <PackageTags>wpf, html</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xaml" />
     <Reference Include="TinyWpfHtml">
       <HintPath>$(OutDir)..\costura32\TinyWpfHtml.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\css\master.css">
@@ -44,6 +56,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="..\TinyWpfHtml.snk">
       <Link>TinyWpfHtml.snk</Link>
     </None>
