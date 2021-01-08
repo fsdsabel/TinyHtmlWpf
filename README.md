@@ -17,6 +17,10 @@ x86 and x64 (or AnyCPU) applications.
 
 ## Release Notes
 
+### 1.2.2.0
+- .NET 5.0 build
+- Fixes possible access violation if control is unloaded while mouse cursor is inside of control
+
 ### 1.2.1.0
 - .NET Core 3.0 build
 - Upgrade to Visual Studio 2019
