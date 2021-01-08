@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <ProjectGuid>{D743D60F-31E7-4FE8-BC8E-0D94EDE668DA}</ProjectGuid>
-    <TargetFrameworks>net46;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>net46;netcoreapp3.0;net50-windows</TargetFrameworks>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -9,7 +9,7 @@
     <SccProvider>SAK</SccProvider>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <OutputPath>$(SolutionDir)bin\$(Configuration)</OutputPath>
-    <Version>1.2.1.0</Version>
+    <Version>1.2.2.0</Version>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <FileVersion>$(Version)</FileVersion>
     <UseWPF>true</UseWPF>
@@ -39,9 +39,13 @@ This library requires the Microsoft® C Runtime Library 14.0.</Description>
     <Copyright>Copyright (c) 2020, Daniel Sabel</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/fsdsabel/TinyHtmlWpf</PackageProjectUrl>
-    <PackageReleaseNotes>1.2.1.0 - Support for .NET Core 3.0
-1.2.0.0 - implemented use of links
-1.1.0.0 - streamlined package install, build and deployment</PackageReleaseNotes>
+    <PackageReleaseNotes>
+      1.2.2.0 - Fixed access violation when document was unloaded and WPF control received a mouse event
+              - Support for .NET 5.0
+      1.2.1.0 - Support for .NET Core 3.0
+      1.2.0.0 - implemented use of links
+      1.1.0.0 - streamlined package install, build and deployment
+    </PackageReleaseNotes>
     <PackageTags>wpf, html</PackageTags>
   </PropertyGroup>
   <ItemGroup>

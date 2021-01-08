@@ -213,6 +213,8 @@ namespace LiteHtml {
 		void GetDefaults(defaults & defaults);
 		void OnAnchorClick(const litehtml::tchar_t * url);
 
+		bool IsDocumentLoaded();
+
 		static void OnHtmlChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs e);
 		static void OnFontChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs e);
 		static void OnForegroundChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs e);

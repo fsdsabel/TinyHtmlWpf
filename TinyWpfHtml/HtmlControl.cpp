@@ -241,7 +241,7 @@ Size HtmlControl::MeasureOverride(Size availableSize)
 	}
 	*/
 	
-	if (_document.get() != nullptr && _document->root()) {
+	if (IsDocumentLoaded()) {
 		if (!double::IsPositiveInfinity(availableSize.Width)) {
 			// fixed viewport with .. go for that, this is quite safe and works well
 			_measureMode = MeasureMode::FixedWidth;
@@ -282,7 +282,7 @@ Size HtmlControl::ArrangeOverride(Size availableSize)
 		// easy peasy
 		return availableSize;
 	case MeasureMode::InfiniteWidth:
-		if (_document.get() != nullptr && _document->root()) {
+		if (IsDocumentLoaded()) {
 			bool sbvisible = _scrollViewerHost->ComputedVerticalScrollBarVisibility == System::Windows::Visibility::Visible;
 			if (sbvisible != _wasVScrollbarVisibleDuringMeasure) {
 				// a vertical scrollbar came into view or disappeared -> remeasure
@@ -302,7 +302,7 @@ Size HtmlControl::ArrangeOverride(Size availableSize)
 void HtmlControl::OnRender(System::Windows::Media::DrawingContext^ drawingContext)
 {
 	drawingContext->DrawRectangle(GetBackground(this), nullptr, Rect(0, 0, RenderSize.Width, RenderSize.Height));
-	if (_document.get() != nullptr && _document->root()) {
+	if (IsDocumentLoaded()) {
 		_clientSize = Size(RenderSize.Width, RenderSize.Height);
 		_document->render(RenderSize.Width); // quite slow but we need it :/
 		_drawingContext = drawingContext;
@@ -379,6 +379,11 @@ void HtmlControl::LoadHtml(String^ html, String^ usercss) {
 
 void HtmlControl::OnMouseMove(System::Windows::Input::MouseEventArgs^ e)
 {
+	if (!IsDocumentLoaded())
+	{
+		return;
+	}
+	
 	Point p = e->GetPosition(this);
 	std::vector<position> redraw;
 	_document->on_mouse_over(p.X, p.Y, p.X, p.Y, redraw);
@@ -389,6 +394,11 @@ void HtmlControl::OnMouseMove(System::Windows::Input::MouseEventArgs^ e)
 }
 void HtmlControl::OnMouseLeave(System::Windows::Input::MouseEventArgs^ e)
 {
+	if(!IsDocumentLoaded())
+	{
+		return;
+	}
+	
 	std::vector<position> redraw;
 	_document->on_mouse_leave(redraw);
 	if (redraw.size() > 0) {
@@ -397,12 +407,22 @@ void HtmlControl::OnMouseLeave(System::Windows::Input::MouseEventArgs^ e)
 }
 void HtmlControl::OnMouseLeftButtonDown(System::Windows::Input::MouseButtonEventArgs^ e)
 {
+	if (!IsDocumentLoaded())
+	{
+		return;
+	}
+	
 	Point p = e->GetPosition(this);
 	std::vector<position> redraw;
 	_document->on_lbutton_down(p.X, p.Y, p.X, p.Y, redraw);
 }
 void HtmlControl::OnMouseLeftButtonUp(System::Windows::Input::MouseButtonEventArgs^ e)
 {
+	if (!IsDocumentLoaded())
+	{
+		return;
+	}
+	
 	Point p = e->GetPosition(this);
 	std::vector<position> redraw;
 	_document->on_lbutton_up(p.X, p.Y, p.X, p.Y, redraw);
@@ -857,4 +877,9 @@ void HtmlControl::OnAnchorClick(const litehtml::tchar_t * url)
 {
 	System::String^ surl = gcnew System::String(url);
 	AnchorClicked(surl);
+}
+
+bool HtmlControl::IsDocumentLoaded()
+{
+	return _document.get() != nullptr && _document->root();
 }
